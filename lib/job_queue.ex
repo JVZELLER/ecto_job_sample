@@ -7,6 +7,17 @@ defmodule Sample.JobQueue do
 
   require Logger
 
+  # alias Sample.JobQueue
+  # alias Sample.Repo
+
+  # success = %{"type" => "normal_one"}
+  # fail = %{"type" => "failed_one"}
+  # bug = %{"type" => "buggy_one"}
+
+  # success |> JobQueue.new(max_attempts: 100) |> Repo.insert!()
+  # fail |> JobQueue.new(max_attempts: 100) |> Repo.insert!()
+  # bug |> JobQueue.new(max_attempts: 100) |> Repo.insert!()
+
   @impl true
   def perform(multi, %{"type" => "normal_one"}) do
     multi
