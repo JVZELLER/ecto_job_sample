@@ -1,21 +1,18 @@
 # Sample
 
-**TODO: Add description**
+Simple project to understand how [`EctoJob`](https://hexdocs.pm/ecto_job) library works.
 
-## Installation
+## Setup
+We are using [`asdf`](https://asdf-vm.com/) to mananage runtime:
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `sample` to your list of dependencies in `mix.exs`:
-
-```elixir
-def deps do
-  [
-    {:sample, "~> 0.1.0"}
-  ]
-end
+```bash
+asdf install
 ```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/sample](https://hexdocs.pm/sample).
+Also, there is a Makefile to help you run this project. The following commands will setup the database service, elixir dependencies and run migrations:
+
+```bash
+make up
+make prepare
+```
 
