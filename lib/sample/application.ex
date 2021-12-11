@@ -7,7 +7,10 @@ defmodule Sample.Application do
 
   @impl true
   def start(_type, _args) do
-    children = [Sample.Repo]
+    children = [
+      Sample.Repo,
+      {Sample.JobQueue, repo: Sample.Repo, max_demand: 100}
+    ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
     # for other strategies and supported options
