@@ -24,7 +24,7 @@ defmodule Sample.JobQueue do
     |> Repo.transaction()
     |> case do
       {:error, step, _reason, _changes} = error ->
-        Logger.error("Fail to execute job due to errors in step '#{step}'")
+        Logger.error("Failed to execute job due to errors in step '#{step}'")
         error
     end
   end
